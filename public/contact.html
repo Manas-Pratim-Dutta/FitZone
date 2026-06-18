@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact Us | FITZONE PERFORMANCE</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700;800&amp;family=Inter:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind Config Verbatim -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#131313",
+                        "on-secondary": "#313030",
+                        "on-surface": "#e4e2e1",
+                        "secondary-fixed": "#e5e2e1",
+                        "inverse-on-surface": "#303030",
+                        "surface-container-highest": "#353535",
+                        "on-secondary-fixed-variant": "#474646",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#abd600",
+                        "secondary-container": "#4a4949",
+                        "surface": "#131313",
+                        "inverse-primary": "#506600",
+                        "surface-container": "#1f2020",
+                        "on-tertiary": "#2f3131",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary-container": "#556d00",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-primary-fixed": "#161e00",
+                        "inverse-surface": "#e4e2e1",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#393939",
+                        "primary": "#ffffff",
+                        "primary-container": "#c3f400",
+                        "tertiary-container": "#e2e2e2",
+                        "on-surface-variant": "#c4c9ac",
+                        "primary-fixed": "#c3f400",
+                        "outline": "#8e9379",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-low": "#1b1c1c",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "outline-variant": "#444933",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-variant": "#353535",
+                        "on-secondary-container": "#bab8b7",
+                        "on-background": "#e4e2e1",
+                        "tertiary": "#ffffff",
+                        "on-primary": "#283500",
+                        "surface-tint": "#abd600",
+                        "surface-dim": "#131313",
+                        "on-tertiary-container": "#636565",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary": "#c8c6c5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "stack-sm": "8px",
+                        "stack-lg": "48px",
+                        "stack-md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Archivo Narrow"],
+                        "headline-lg": ["Archivo Narrow"],
+                        "label-bold": ["Inter"],
+                        "headline-md": ["Archivo Narrow"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-xl": ["Archivo Narrow"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["36px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-xl": ["80px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .hard-drop {
+            box-shadow: 8px 8px 0px 0px #000000;
+        }
+
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+            color: transparent;
+        }
+
+        input:focus~label,
+        input:not(:placeholder-shown)~label {
+            transform: translateY(-1.5rem) scale(0.85);
+            color: #abd600;
+        }
+
+        /* Custom scrollbar for brutalist feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #2a2a2a;
+            border: 1px solid #abd600;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+    <!-- Top Navigation Bar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-background dark:bg-background border-b border-on-surface/10 flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop w-full max-w-full mx-auto">
+        <div class="font-display-xl text-headline-md text-primary dark:text-primary tracking-tighter uppercase">FITZONE
+        </div>
+        <div class="hidden md:flex items-center space-x-gutter">
+            <a class="font-label-bold text-label-bold uppercase text-primary border-b-2 border-primary pb-1 transition-all"
+                href="/">Home</a>
+            <a class="font-label-bold text-label-bold uppercase text-primary transition-all" href="/training">
+                Programs
+            </a>
+            <a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-primary transition-colors"
+                href="/coaching">Coaching</a>
+            <a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-primary transition-colors"
+                href="#">Schedule</a>
+            <a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-primary transition-colors"
+                href="/contact">Contact</a>
+        </div>
+        <button
+            class="font-label-bold text-label-bold uppercase bg-primary-container text-on-primary-container px-6 py-3 active:scale-95 transition-transform hover:opacity-80">
+            JOIN NOW
+        </button>
+    </nav>
+    <main class="pt-32 pb-stack-lg">
+        <!-- Hero Section -->
+        <section class="px-margin-mobile md:px-margin-desktop mb-stack-lg">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                <div class="lg:col-span-8">
+                    <span
+                        class="inline-block px-3 py-1 border border-primary-container text-primary-container font-label-bold text-[12px] mb-4 uppercase tracking-widest">Unisex
+                        Elite Facility</span>
+                    <h1 class="font-display-xl text-[64px] md:text-display-xl leading-none mb-6">GET IN <span
+                            class="text-primary-container italic">TOUCH</span></h1>
+                    <p class="font-body-lg text-on-surface-variant max-w-2xl">Ready to push your limits? Whether you
+                        have questions about our equipment, coaching, or membership plans, our team is here to help you
+                        bridge the gap between where you are and where you want to be.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Main Content Grid -->
+        <section class="px-margin-mobile md:px-margin-desktop">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                <!-- Contact Form Side -->
+                <div class="lg:col-span-7 bg-surface-container-high p-8 md:p-12 relative overflow-hidden">
+                    <!-- Subtle background decoration -->
+                    <div
+                        class="absolute top-0 right-0 font-display-xl text-[120px] opacity-[0.03] select-none pointer-events-none translate-x-1/4 -translate-y-1/4 uppercase">
+                        Contact</div>
+                    <form class="relative z-10 space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="relative group">
+                                <input
+                                    class="peer w-full bg-surface-container text-on-surface border-0 border-b border-on-surface/20 py-4 focus:ring-0 focus:border-primary-container transition-all"
+                                    id="name" placeholder=" " type="text" />
+                                <label
+                                    class="absolute left-0 top-4 text-on-surface-variant pointer-events-none transition-all peer-focus:text-primary-container font-label-bold uppercase text-[12px]"
+                                    for="name">Full Name</label>
+                            </div>
+                            <div class="relative group">
+                                <input
+                                    class="peer w-full bg-surface-container text-on-surface border-0 border-b border-on-surface/20 py-4 focus:ring-0 focus:border-primary-container transition-all"
+                                    id="email" placeholder=" " type="email" />
+                                <label
+                                    class="absolute left-0 top-4 text-on-surface-variant pointer-events-none transition-all peer-focus:text-primary-container font-label-bold uppercase text-[12px]"
+                                    for="email">Email Address</label>
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <select
+                                class="peer w-full bg-surface-container text-on-surface border-0 border-b border-on-surface/20 py-4 focus:ring-0 focus:border-primary-container transition-all appearance-none cursor-pointer"
+                                id="subject">
+                                <option disabled="" selected="" value="">Select Inquiry Type</option>
+                                <option value="membership">Membership Plans</option>
+                                <option value="coaching">Personal Coaching</option>
+                                <option value="corporate">Corporate Wellness</option>
+                                <option value="other">General Inquiry</option>
+                            </select>
+                            <label
+                                class="absolute left-0 -top-4 text-primary-container font-label-bold uppercase text-[12px]"
+                                for="subject">Inquiry Type</label>
+                            <div class="absolute right-0 top-4 pointer-events-none">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <textarea
+                                class="peer w-full bg-surface-container text-on-surface border-0 border-b border-on-surface/20 py-4 focus:ring-0 focus:border-primary-container transition-all resize-none"
+                                id="message" placeholder=" " rows="4"></textarea>
+                            <label
+                                class="absolute left-0 top-4 text-on-surface-variant pointer-events-none transition-all peer-focus:text-primary-container font-label-bold uppercase text-[12px]"
+                                for="message">Your Message</label>
+                        </div>
+                        <button
+                            class="w-full bg-primary-container text-on-primary-container font-display-xl text-headline-md py-6 active:scale-95 transition-transform hover:bg-white hover:text-black"
+                            type="submit">
+                            SEND MESSAGE
+                        </button>
+                    </form>
+                </div>
+                <!-- Info Side -->
+                <div class="lg:col-span-5 space-y-gutter">
+                    <!-- Location Card -->
+                    <div class="bg-surface-container-high border-l-4 border-primary-container p-8">
+                        <div class="flex items-start space-x-4 mb-6">
+                            <div class="bg-primary-container text-on-primary-container p-3">
+                                <span class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <div>
+                                <h3 class="font-headline-md text-primary mb-2 uppercase">THE BASE CAMP</h3>
+                                <p class="text-on-surface-variant">124 Performance Way, District 9<br />San Francisco,
+                                    CA 94103</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 mb-6">
+                            <div class="bg-primary-container text-on-primary-container p-3">
+                                <span class="material-symbols-outlined">call</span>
+                            </div>
+                            <div>
+                                <h3 class="font-headline-md text-primary mb-2 uppercase">DIRECT LINE</h3>
+                                <p class="text-on-surface-variant">+1 (555) 012-3456</p>
+                                <p class="text-on-surface-variant">Mon-Fri: 5AM - 11PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary-container text-on-primary-container p-3">
+                                <span class="material-symbols-outlined">groups</span>
+                            </div>
+                            <div>
+                                <h3 class="font-headline-md text-primary mb-2 uppercase">UNISEX FACILITY</h3>
+                                <p class="text-on-surface-variant">Inclusivity is our core. Open to all genders with
+                                    dedicated premium locker rooms.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Map Container -->
+                    <div
+                        class="relative h-[300px] bg-surface-container overflow-hidden group border border-on-surface/10">
+                        <div class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+                            data-location="San Francisco">
+                            <!-- Map injection point -->
+                            <img class="w-full h-full object-cover"
+                                data-alt="A stylized, high-contrast dark mode satellite map of a modern urban San Francisco neighborhood, featuring sharp architectural lines and industrial textures. The color palette is dominated by deep charcoal, blacks, and glowing lime green accents for roads. The overall mood is high-tech, professional, and gritty, matching a brutalist fitness brand aesthetic."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXSfabT8kowgqME5NiMpb0y1-RnexKZ6Xg9-I-iqwPThWYX22SelfbC7q17AmrMfkUpgNNAGiY4FBtXu93SiPW2N3vHuQPAfH_uR8aenecc3vwgne7gzZrW8KLdG-29wFDV3pDF-z_8dtq6LZ2SXaLU7KNoea6n0RQIHAOWmTO59CD0fDg-0u-bJOXf7sM93CMnzBy2eE2ONTSj0COzEFhA_jMQLPklMUkicpdfCUkf7Zho1tv3AsuA1b-r_dfI2_7YOJMYp8wW8k" />
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 pointer-events-none">
+                            <span class="font-label-bold text-primary flex items-center">
+                                <span class="material-symbols-outlined mr-2">directions_run</span>
+                                GET DIRECTIONS
+                            </span>
+                        </div>
+                    </div>
+                    <!-- CTA Mini-Card -->
+                    <div class="bg-primary-container p-8 hard-drop">
+                        <h4 class="font-headline-md text-on-primary-container mb-2 uppercase leading-tight">JOIN THE
+                            ELITE RANK</h4>
+                        <p class="text-on-primary-container/80 mb-4 text-sm">First session is on us. Experience the
+                            intensity before you commit.</p>
+                        <a class="inline-flex items-center font-label-bold text-on-primary-container hover:underline uppercase text-[12px]"
+                            href="#">
+                            Free Trial Application
+                            <span class="material-symbols-outlined ml-1">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Social Proof/Atmosphere -->
+        <section class="mt-stack-lg px-margin-mobile md:px-margin-desktop">
+            <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="h-64 overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+                    <img class="w-full h-full object-cover"
+                        data-alt="Raw, high-grain photography of a powerful athlete lifting heavy weights in a dark, moody gym. The lighting is dramatic and cinematic, emphasizing muscular definition. The environment is industrial with exposed concrete and subtle lime green lighting accents. The style is professional and high-intensity."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGMXYotGQjFu5F3X1UNHQ-SLECQofty5mO8J9pI96OaCmmY9hBq48b8ncZr9JfcaRSmXQ7ZDZ5lHKai2UdUrofb-jCV0_WMpdflbpH79khg6-wb4p4E4jta6pMoAZPLUx0kmshSmbuobHf_l6OraZd-55Y0yOtsdzXGoJTElujbPtTWnnHnJSXt2MiiuxonsOnn28ay78ZJoUmWviYywkfTlAcgBPzllA3HxiXbXaq6R4UXrDcl4ZJkTV0UckEqQJ33yNCRhj0yQE" />
+                </div>
+                <div class="h-64 overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+                    <img class="w-full h-full object-cover"
+                        data-alt="A focused female athlete performing high-intensity interval training in a modern brutalist gym facility. The shot is dynamic with a sense of motion. Dramatic shadows and sharp highlights create an aggressive, motivating atmosphere. Deep black background with vibrant white and primary lime details."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxkfF72kdPH7kdu7xtCTmym14i53rKwDO2443gxSGlVEcHu491sDEEqrruMyLSFFF6Mfz315A1XPb7XLqMWXEdWfT_PWNEIOwXLeNY-3Bz0cSVvvE-LproruGmscnMolq3s8Ep0igV6dz5fvOc5efVR1uQbR_05noixJK_EX6UI0MnpX1Ps3ltQeZRw1pg7vRQWuRKxEyD0jfogJgMbvZ7HiQ7NbmwgbLHG5UP1N1PiMinzKscs5ZjprgrFWdCsk1kgzfj9CpiGSk" />
+                </div>
+                <div class="h-64 overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+                    <img class="w-full h-full object-cover"
+                        data-alt="Detail shot of high-end, professional gym equipment in a high-contrast black and white setting. The metal textures are gritty and raw. Subtle glows from digital displays provide the only color. The visual style is unapologetically bold and disciplined."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3EgO3bhhr6UHDE8OvnGcF5iQjup9o--BwWpWbJIVOehuN4SXvqBogfRkbMqRTn0ByT_X8UzQoQLVW8RiccSO3aNAXN05N9AJLSjlKb4rvwKqdk8bsAItvdN_R6eYyqtHnqtcU8dF9yyUaNP0CqL_KemBNYD5WOlg8sk-hfNXxDO_BFldtWrd2B3vushdlYcCfZZeRtxSs9ZmA4apHLK2qXCiTRmoJFG6lKquYm_a_8bG3NwQJsHkc666tIIgxG6SL65nqpEWzSRk" />
+                </div>
+                <div class="h-64 overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+                    <img class="w-full h-full object-cover"
+                        data-alt="An athlete mid-sprint on a high-tech treadmill within a dark, premium fitness club. Steam and sweat are visible, illuminated by a single harsh spotlight. The aesthetic is gritty, cinematic, and physical, using a limited palette of black, white, and intense lime green."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX7hJ2vA2uQOpQoqwvVgnIGwVCKhlSjOZ7qVWT-9fsxA6u9JpOifCI9e_UcWTR3T97EEQMfbrApzdL_AMb6pV5vA7ub14q9d4o00Id4h2gMc6fBsLl0eiiulrFnxDd1-agzFB7B9NjsF_ANw2UlSFwb_tgMbg7Qq99HRACv1PfAHzgheM5mg-xcs3wtp99OHgZ3VgbkrMMhH9TAVVe5ot-dTHtMggZBT7mSpLc9DuFUVSpwarhd4Ghqc1iRETSdTLzY8Q95pmi_8M" />
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-on-surface/10 w-full">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center py-stack-lg px-margin-mobile md:px-margin-desktop w-full max-w-7xl mx-auto">
+            <div class="mb-8 md:mb-0">
+                <div class="font-display-xl text-headline-md text-primary dark:text-primary uppercase mb-2">FITZONE
+                </div>
+                <p class="font-body-md text-on-surface-variant max-w-sm">Pushing human performance since 2018. The
+                    ultimate training ground for the disciplined.</p>
+            </div>
+            <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-gutter items-center">
+                <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy
+                    Policy</a>
+                <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of
+                    Service</a>
+                <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Careers</a>
+                <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Support</a>
+            </div>
+        </div>
+        <div
+            class="py-8 px-margin-mobile md:px-margin-desktop border-t border-on-surface/5 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+            <div class="font-body-md text-on-surface-variant text-[12px] uppercase tracking-wider">
+                © 2024 FITZONE PERFORMANCE. ALL RIGHTS RESERVED.
+            </div>
+            <div class="flex space-x-6">
+                <a class="text-on-surface-variant hover:text-primary" href="#"><span
+                        class="material-symbols-outlined">share</span></a>
+                <a class="text-on-surface-variant hover:text-primary" href="#"><span
+                        class="material-symbols-outlined">mail</span></a>
+                <a class="text-on-surface-variant hover:text-primary" href="#"><span
+                        class="material-symbols-outlined">forum</span></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Simple form interaction
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'SENDING...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerText = 'MESSAGE SENT';
+                btn.classList.replace('bg-primary-container', 'bg-green-600');
+                btn.classList.add('text-white');
+                e.target.reset();
+
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.replace('bg-green-600', 'bg-primary-container');
+                    btn.classList.remove('text-white');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+
+        // Floating action scroll reveal
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('backdrop-blur-md', 'bg-background/80');
+            } else {
+                nav.classList.remove('backdrop-blur-md', 'bg-background/80');
+            }
+        });
+    </script>
+</body>
+
+</html>

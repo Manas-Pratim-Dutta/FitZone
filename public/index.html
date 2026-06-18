@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FITZONE | EVOLVE YOUR STRENGTH</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700;800&amp;family=Inter:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#131313",
+                        "on-secondary": "#313030",
+                        "on-surface": "#e4e2e1",
+                        "secondary-fixed": "#e5e2e1",
+                        "inverse-on-surface": "#303030",
+                        "surface-container-highest": "#353535",
+                        "on-secondary-fixed-variant": "#474646",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#abd600",
+                        "secondary-container": "#4a4949",
+                        "surface": "#131313",
+                        "inverse-primary": "#506600",
+                        "surface-container": "#1f2020",
+                        "on-tertiary": "#2f3131",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary-container": "#556d00",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-primary-fixed": "#161e00",
+                        "inverse-surface": "#e4e2e1",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#393939",
+                        "primary": "#ffffff",
+                        "primary-container": "#c3f400",
+                        "tertiary-container": "#e2e2e2",
+                        "on-surface-variant": "#c4c9ac",
+                        "primary-fixed": "#c3f400",
+                        "outline": "#8e9379",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-low": "#1b1c1c",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "outline-variant": "#444933",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-variant": "#353535",
+                        "on-secondary-container": "#bab8b7",
+                        "on-background": "#e4e2e1",
+                        "tertiary": "#ffffff",
+                        "on-primary": "#283500",
+                        "surface-tint": "#abd600",
+                        "surface-dim": "#131313",
+                        "on-tertiary-container": "#636565",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary": "#c8c6c5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "stack-sm": "8px",
+                        "stack-lg": "48px",
+                        "stack-md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Archivo Narrow"],
+                        "headline-lg": ["Archivo Narrow"],
+                        "label-bold": ["Inter"],
+                        "headline-md": ["Archivo Narrow"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-xl": ["Archivo Narrow"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["36px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-xl": ["80px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "800" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .hard-drop-shadow {
+            filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 1));
+        }
+
+        .primary-glow {
+            text-shadow: 0 0 20px rgba(195, 244, 0, 0.4);
+        }
+
+        body {
+            background-color: #131313;
+            color: #e4e2e1;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body class="font-body-md text-body-md bg-background text-on-background">
+    <!-- TopNavBar Shell -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-background dark:bg-background border-b border-on-surface/10 flat no shadows h-20 px-margin-mobile md:px-margin-desktop flex justify-between items-center w-full max-w-full mx-auto">
+        <div
+            class="font-display-xl text-headline-md text-primary dark:text-primary tracking-tighter uppercase font-extrabold">
+            FITZONE
+        </div>
+        <div class="hidden md:flex gap-gutter items-center">
+            <a class="font-label-bold text-label-bold uppercase text-primary border-b-2 border-primary pb-1 transition-all"
+                href="/">Home</a>
+            <a class="font-label-bold text-label-bold uppercase text-primary transition-all" href="/training">
+                Programs
+            </a>
+            <a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-primary transition-colors"
+                href="/coaching">Coaching</a>
+            <a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-primary transition-colors"
+                href="#">Schedule</a>
+            <a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-primary transition-colors"
+                href="/contact">Contact</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button
+                class="bg-primary-container text-on-primary font-label-bold text-label-bold px-6 py-2 uppercase hover:opacity-80 active:scale-95 transition-all">
+                JOIN NOW
+            </button>
+            <button class="md:hidden text-primary">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Background Animation Layer -->
+        <div class="absolute inset-0 z-0 opacity-40">
+
+        </div>
+        <!-- Hero Image Overlay (Transparent gradient to black) -->
+        <div class="absolute inset-0 z-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+        <div
+            class="container mx-auto px-margin-mobile md:px-margin-desktop relative z-10 grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+            <div class="md:col-span-8 lg:col-span-7">
+                <div
+                    class="inline-block bg-primary-container text-on-primary font-label-bold text-[12px] px-3 py-1 mb-6 uppercase tracking-widest">
+                    Performance Excellence
+                </div>
+                <h1
+                    class="font-display-xl text-[64px] md:text-display-xl leading-none mb-4 uppercase tracking-tighter italic">
+                    EVOLVE YOUR <br /><span class="text-primary-container primary-glow">STRENGTH</span>
+                </h1>
+                <p
+                    class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-stack-lg border-l-4 border-primary-container pl-6">
+                    Our elite unisex facility offers world-class equipment and diverse training programs designed for
+                    those who demand excellence. From tactical strength to metabolic conditioning, we build athletes.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button
+                        class="bg-primary-container text-on-primary font-label-bold text-label-bold px-10 py-4 uppercase hover:opacity-90 active:scale-95 transition-all text-lg">
+                        JOIN THE ZONE NOW
+                    </button>
+                    <button
+                        class="border-2 border-primary text-primary font-label-bold text-label-bold px-10 py-4 uppercase hover:bg-primary hover:text-background active:scale-95 transition-all text-lg">
+                        VIEW SCHEDULE
+                    </button>
+                </div>
+            </div>
+            <!-- Hero Decorative Card -->
+            <div class="hidden lg:block lg:col-span-5 relative">
+                <div
+                    class="bg-surface-container-high border border-primary-container/20 p-8 hard-drop-shadow relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 -mr-16 -mt-16 rounded-full blur-3xl group-hover:bg-primary-container/20 transition-all">
+                    </div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-primary-container flex items-center justify-center">
+                            <span class="material-symbols-outlined text-background"
+                                style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-headline-md uppercase">Elite Coaching</h3>
+                            <p class="text-xs text-on-surface-variant uppercase tracking-widest">Available 24/7</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+                            <span class="font-label-bold text-label-bold uppercase">Personalized Biometric
+                                Tracking</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+                            <span class="font-label-bold text-label-bold uppercase">Olympic Lifting Platforms</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+                            <span class="font-label-bold text-label-bold uppercase">Pro Recovery Lounge</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Stats Ticker -->
+    <div class="bg-primary-container py-4 overflow-hidden border-y border-background">
+        <div class="flex whitespace-nowrap animate-[scroll_30s_linear_infinite]">
+            <div class="flex items-center gap-8 px-4">
+                <span class="text-background font-display-xl text-headline-md uppercase italic px-8">No Excuses</span>
+                <span class="text-background font-display-xl text-headline-md opacity-30">•</span>
+                <span class="text-background font-display-xl text-headline-md uppercase italic px-8">Train Harder</span>
+                <span class="text-background font-display-xl text-headline-md opacity-30">•</span>
+                <span class="text-background font-display-xl text-headline-md uppercase italic px-8">Modern
+                    Brutalist</span>
+                <span class="text-background font-display-xl text-headline-md opacity-30">•</span>
+                <span class="text-background font-display-xl text-headline-md uppercase italic px-8">Elite
+                    Performance</span>
+                <span class="text-background font-display-xl text-headline-md opacity-30">•</span>
+                <span class="text-background font-display-xl text-headline-md uppercase italic px-8">Evolution</span>
+            </div>
+            <!-- Duplicate for infinite scroll effect -->
+            <div class="flex items-center gap-8 px-4">
+                <span class="text-background font-display-xl text-headline-md uppercase italic px-8">No Excuses</span>
+                <span class="text-background font-display-xl text-headline-md opacity-30">•</span>
+                <span class="text-background font-display-xl text-headline-md uppercase italic px-8">Train Harder</span>
+                <span class="text-background font-display-xl text-headline-md opacity-30">•</span>
+                <span class="text-background font-display-xl text-headline-md uppercase italic px-8">Modern
+                    Brutalist</span>
+                <span class="text-background font-display-xl text-headline-md opacity-30">•</span>
+                <span class="text-background font-display-xl text-headline-md uppercase italic px-8">Elite
+                    Performance</span>
+                <span class="text-background font-display-xl text-headline-md opacity-30">•</span>
+                <span class="text-background font-display-xl text-headline-md uppercase italic px-8">Evolution</span>
+            </div>
+        </div>
+    </div>
+    <!-- Programs Section -->
+    <section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-background overflow-hidden">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg gap-gutter">
+                <div class="max-w-2xl">
+                    <h2
+                        class="font-display-xl text-headline-lg-mobile md:text-headline-lg uppercase mb-4 tracking-tighter">
+                        CHOOSE YOUR <br /><span class="text-primary-container">DISCIPLINE</span>
+                    </h2>
+                    <div class="h-1 w-24 bg-primary-container"></div>
+                </div>
+                <div class="text-right hidden md:block">
+                    <p class="font-label-bold text-label-bold uppercase text-on-surface-variant max-w-xs">
+                        Push your limits with our scientifically curated training modalities.
+                    </p>
+                </div>
+            </div>
+            <!-- Bento Grid Programs -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <!-- CrossFit - Large Hero Card -->
+                <div class="md:col-span-8 relative h-[450px] group overflow-hidden border border-on-surface/10">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        data-alt="A gritty, high-contrast black and white photograph of an athlete performing a heavy barbell snatch in a raw industrial gym setting. Dust particles are caught in dramatic shaft of light from above. The scene captures intense physical effort and focus with deep shadows and sharp highlights, emphasizing a brutalist fitness aesthetic."
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAx0dc57scNNnAIRbk6vCaCepXJ7wrNn3kOVXCTXLdufTsWpGqcmhRezOEsIJqDAhvCd2UeiD3J0EKahnA_LvekHCBY86DrA_9OPoWwI5aTstLTM2T2SvGZ15VUpwt9l-x0ljQnOChu0nMnpDdf_i_5RDB0LNzodQODFZcD_olU7OgQzp_X2zJZTNj2UMvP2QUlYfY-N-7czp4hEGNU5pzjIlrpKPX_p0TU-E1397H-QijwGV7pECtoQFbBCPdQnbqr6Ao-4bPfNpo')">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full flex justify-between items-end">
+                        <div>
+                            <span
+                                class="text-primary-container font-label-bold text-xs uppercase tracking-widest mb-2 block">01
+                                / Elite Conditioning</span>
+                            <h3 class="font-display-xl text-headline-lg uppercase italic leading-none mb-4">CrossFit
+                            </h3>
+                            <p class="max-w-sm text-on-surface/80">Forging elite fitness through varied, high-intensity
+                                functional movement.</p>
+                        </div>
+                        <button
+                            class="bg-primary-container w-12 h-12 flex items-center justify-center active:scale-95 transition-transform">
+                            <span class="material-symbols-outlined text-background">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- HIIT -->
+                <div class="md:col-span-4 relative h-[450px] group overflow-hidden border border-on-surface/10">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        data-alt="A dynamic shot of a fitness athlete performing explosive box jumps. The motion is slightly blurred to suggest speed and intensity. The lighting is moody and dramatic, with a subtle lime green neon glow reflecting off metallic gym equipment. The overall style is high-energy, modern, and aggressive."
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsD_ywMdQFIM6kXpR8E-yBK1iNXkLs2AdMXHvnTajzaEeSSA8bXxv6U6P6EKYK7cO7iO16Ix2JMssK9oOIpscWAxFLj6eVu99Fi3AtbNzQcH_iysyWRJTkPeIpg9xcpBOuwhlb8oBAYPFNFz5f0YTXyFs-haXKcXw_JLvwslVkKIOcOfR2eLYoLqx4HBvxLDTWpJTFVluTnMmsMBX1ELDHt_QG4AQ2COtENuEdvl1_B1EvOoKsjQpoS37QRQhWKBTZiPNP3nCvlTQ')">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <span
+                            class="text-primary-container font-label-bold text-xs uppercase tracking-widest mb-2 block">02
+                            / Metabolic</span>
+                        <h3
+                            class="font-headline-lg text-headline-lg-mobile md:text-headline-md uppercase italic leading-none mb-2">
+                            HIIT</h3>
+                        <p class="text-sm text-on-surface/80 mb-4">Maximum burn in minimum time. Push your heart rate to
+                            the redline.</p>
+                        <a class="inline-flex items-center gap-2 font-label-bold text-label-bold uppercase text-primary-container group"
+                            href="#">
+                            Explore <span
+                                class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward_ios</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Strength Training -->
+                <div class="md:col-span-4 relative h-[400px] group overflow-hidden border border-on-surface/10">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Close up of heavily chalked hands gripping a thick metal barbell. The texture of the iron and the dust of the chalk are sharply detailed against a dark, moody background. Professional fitness photography style with hard lighting that emphasizes physical power and industrial textures."
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhbCgJV7bwHz_R0PXXA-MHQfAXk7Z-xU-zCMS6Bq_8T8ZwNbonDujpqU7S9dAyewVn8rf216sz4LyUjH7iFwVuhCtQQ1xUy-uePjlKhxhAjG2fGkQhOr92MuJQEKxQFd9K5-d5QfvVu8lWL2u98FYBerJVBdkRO7JF3YnBwceeV0zYhXZ-XVuVLoBD2jcgCGQDgLBZ6U6zRTeV91AJkS66tAU47pfY6xV195PkIz47l3NedyY4mpmqXXlsc6tp0lnScHf5JAI3Dhs')">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <span
+                            class="text-primary-container font-label-bold text-xs uppercase tracking-widest mb-2 block">03
+                            / Foundation</span>
+                        <h3
+                            class="font-headline-lg text-headline-lg-mobile md:text-headline-md uppercase italic leading-none mb-2">
+                            Strength</h3>
+                        <p class="text-sm text-on-surface/80">Compound movements and linear progression for raw power.
+                        </p>
+                    </div>
+                </div>
+                <!-- Kick Boxing -->
+                <div class="md:col-span-4 relative h-[400px] group overflow-hidden border border-on-surface/10">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        data-alt="A focused fighter in black hand wraps striking a heavy bag. Sweat is visible flying off the athlete in mid-air. The environment is a dimly lit basement gym with harsh overhead lighting that creates strong contrasts. The mood is gritty, determined, and high-performance."
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDM0qPZK19310wqUca-I0MYsgOmUqrERD4P2NN-VD5bB_EqlFFC8d6QFPJrLmKuFR3MgKfwTobhZn3iqciYpsIwVewZzfv-exM0Ejji5pNPUhDrxL6scMc7XuIeBGFUhtjCsvoYFOQSGs98Tw-3bf9JY83rQuoJvAi6q7RU5ClcB8aKr74a7E3KRoCw-A8M5E7tPF6G0fWVaumAV6sEkTbBeVkcKcTgzcXsA2lWPpPpYNyprgMFCy34qv372rp2e2KJkYP7xE-4Yf4')">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <span
+                            class="text-primary-container font-label-bold text-xs uppercase tracking-widest mb-2 block">04
+                            / Combat</span>
+                        <h3
+                            class="font-headline-lg text-headline-lg-mobile md:text-headline-md uppercase italic leading-none mb-2">
+                            Kick Boxing</h3>
+                        <p class="text-sm text-on-surface/80">Precision, speed, and lethal conditioning through martial
+                            arts.</p>
+                    </div>
+                </div>
+                <!-- Bodybuilding -->
+                <div class="md:col-span-4 relative h-[400px] group overflow-hidden border border-on-surface/10">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Dramatic silhouette of a bodybuilder posing under a single spotlight. The muscular definition is highlighted by sharp rim lighting against a deep black background. Professional aesthetic inspired by classic iron-era bodybuilding but with a modern, high-contrast digital finish."
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyhF2VpsaJtmBReoG4xY9va4iWzJlw3H64z1L4pu-_do6th_w3xNEDpNaqqVX2SJUE0rOgZ_rTSulm5ZyOpHVcUHLH2VNZncFSo-xuLIbXF-h5K1IJhlygL2eV8LiM7WZwn5na6QDaet83tPxPGfLnK022VGgwqK2FnSG8YUtbbsSKA7gxviMrULNqQ5wTcVilZho24b0MSeOiraab4Qqnw7SmvcHhNdPDEG1M6tleUr_taKXSzGW88OewYv0xm4jScT7myPdqk0A')">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <span
+                            class="text-primary-container font-label-bold text-xs uppercase tracking-widest mb-2 block">05
+                            / Aesthetics</span>
+                        <h3
+                            class="font-headline-lg text-headline-lg-mobile md:text-headline-md uppercase italic leading-none mb-2">
+                            Hypertrophy</h3>
+                        <p class="text-sm text-on-surface/80">Sculpting the ultimate physique with targeted hypertrophy
+                            protocols.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Call to Action Section -->
+    <section class="py-24 px-margin-mobile md:px-margin-desktop relative overflow-hidden bg-surface-container-high">
+        <div class="absolute top-0 left-0 w-full h-1 bg-primary-container"></div>
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-stack-lg">
+            <div>
+                <h2 class="font-display-xl text-headline-lg-mobile md:text-headline-lg uppercase italic mb-6">READY TO
+                    JOIN THE <span class="text-primary-container">ELITE?</span></h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-md max-w-md">
+                    No contracts, no hidden fees. Just results. Join FitZone today and get your first week of coaching
+                    for free.
+                </p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-lg">
+                    <input
+                        class="bg-background border-b-2 border-on-surface/20 focus:border-primary-container focus:ring-0 text-primary font-label-bold py-4 px-4 flex-grow uppercase tracking-widest transition-colors outline-none"
+                        placeholder="ENTER YOUR EMAIL" type="email" />
+                    <button
+                        class="bg-primary text-background font-label-bold text-label-bold px-8 py-4 uppercase hover:bg-primary-container active:scale-95 transition-all">
+                        GET STARTED
+                    </button>
+                </form>
+            </div>
+            <div class="relative">
+                <div class="aspect-square bg-background border border-primary-container/30 p-4 relative">
+                    <div class="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-primary-container">
+                    </div>
+                    <div class="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-primary-container">
+                    </div>
+                    <div class="w-full h-full bg-cover bg-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500"
+                        data-alt="Interior view of a high-end, brutalist gym. The floor is black rubber, the walls are raw concrete, and the equipment is premium black steel with subtle lime green accents. Natural light filters in through industrial high windows, creating a clean but intense atmosphere of focused training."
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCAGLM3EBD2zGBKBY0bSXcuTE6kZ4qw4MJv0-EiLDd2jbZWy_ZjhhMiUo0J5cfFv3WSLyb4OxRssjvEE9cBCPgA_gpDBSHzD2O22QEwEyh3pA60gC2ibDbH7wGnzWpnZtQWfmPxj6KmU3vSaSMlLxJczGcRekHCRL5BXbCE2exu_oXHN0ypcwk_ZlMGVT7SdpdPEAkHfUA2K1P6gSZo7YANbG3OiIqu0PoizKaTeiId4ZMyOkX6seZrAiyPkSfkL-ib_Xdk7z8jxg')">
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="bg-primary-container text-background p-6 text-center rotate-3">
+                            <p class="font-display-xl text-headline-md leading-none mb-1 tracking-tighter">OFFER</p>
+                            <p class="font-label-bold text-[32px] font-extrabold uppercase leading-none">FREE WEEK</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Shell -->
+    <footer
+        class="w-full bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-on-surface/10 py-stack-lg px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center w-full">
+        <div class="flex flex-col md:items-start items-center mb-8 md:mb-0">
+            <div class="font-display-xl text-headline-md text-primary dark:text-primary mb-4 uppercase font-extrabold">
+                FITZONE
+            </div>
+            <p
+                class="text-on-surface-variant font-body-md text-body-md text-center md:text-left max-w-xs uppercase tracking-tight opacity-60">
+                The ultimate destination for high-performance training and elite physical evolution.
+            </p>
+        </div>
+        <div class="flex flex-col items-center md:items-end gap-6">
+            <div class="flex gap-gutter">
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Privacy Policy</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Terms of Service</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Careers</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Support</a>
+            </div>
+            <div class="text-on-surface-variant font-body-md text-[12px] opacity-40 uppercase tracking-widest">
+                © 2026 FITZONE PERFORMANCE. ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </footer>
+    <style>
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+    <script>
+        // Micro-interaction for hover states on buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.style.letterSpacing = '0.1em';
+            });
+            button.addEventListener('mouseleave', () => {
+                button.style.letterSpacing = '0.05em';
+            });
+        });
+    </script>
+</body>
+
+</html>
